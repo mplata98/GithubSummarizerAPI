@@ -1,4 +1,4 @@
-package com.michal.plata.gitHubSummarizer;
+package com.michal.plata.github_summarizer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
