@@ -3,7 +3,7 @@ package com.michal.plata.github_summarizer.dto.github_data;
 import java.util.Map;
 
 import com.michal.plata.github_summarizer.dto.repo_data.RepoDataDTOImpl;
-import com.michal.plata.github_summarizer.mapper.repo_map_mapper_mapstruct.RepoMapMapperMapstruct;
+import com.michal.plata.github_summarizer.mapper.repo_map_mapper.RepoMapMapper;
 
 import org.kohsuke.github.GHRepository;
 
@@ -28,9 +28,7 @@ public class GithubDataDTOImpl implements GithubDataDTO {
     
     @Override
     public void setRepos(Map<String, GHRepository> repos) {
-        // RepoMapMapper mapMapper = new RepoMapMapperImpl();
-        // this.repos = mapMapper.mapGHRepoToMapRepoDataDTO(repos);
-        this.repos = RepoMapMapperMapstruct.INSTANCE.mapRepoToMapRepoDTO(repos);
+        this.repos = RepoMapMapper.INSTANCE.mapRepoToMapRepoDTO(repos);
     }
 
     @Override
