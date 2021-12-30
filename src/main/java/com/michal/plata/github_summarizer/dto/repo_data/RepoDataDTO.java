@@ -5,7 +5,7 @@ import java.util.Map;
 
 public interface RepoDataDTO {
     //Getters
-    String getName();
+    String getRepoName();
     String getDescription();
     Map<String,Long> getLanguages();
     Long getNumberOfCollaborators();
@@ -13,7 +13,7 @@ public interface RepoDataDTO {
     Long getNumberOfWatchers();
 
     //Setters
-    void setName(String name);
+    void setRepoName(String name);
     void setDescription(String description);
     void setLanguages(Map<String, Long> languages);
     void setNumberOfCollaborators(Long numberOfCollaborators);

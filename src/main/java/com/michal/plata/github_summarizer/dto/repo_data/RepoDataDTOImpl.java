@@ -12,12 +12,12 @@ public class RepoDataDTOImpl implements RepoDataDTO {
     private Long numberOfWatchers;
 
     @Override
-    public String getName() {
+    public String getRepoName() {
         return name;
     }
     
     @Override
-    public void setName(String name) {
+    public void setRepoName(String name) {
         this.name = name;
     }
     
