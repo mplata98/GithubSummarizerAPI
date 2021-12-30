@@ -2,7 +2,9 @@ package com.michal.plata.github_summarizer;
 
 import javax.annotation.PostConstruct;
 
+import com.michal.plata.github_summarizer.dto.github_data.GithubDataDTO;
 import com.michal.plata.github_summarizer.service.github_communication.GithubCommunicationService;
+import com.michal.plata.github_summarizer.support.printer.DebugPrinter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,7 +24,8 @@ public class GitHubSummarizerApplication {
 
 	@PostConstruct
 	public void init() {
-		githubCommunicationService.getData("mplata98");
+		GithubDataDTO dto = githubCommunicationService.getData("mplata98");
+		DebugPrinter.print(dto.getRepos().toString());
 	}
 
 }
