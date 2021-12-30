@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import com.michal.plata.github_summarizer.dto.github_data.GithubDataDTO;
 import com.michal.plata.github_summarizer.dto.github_data.GithubDataDTOImpl;
-import com.michal.plata.github_summarizer.support.printer.Printer;
+import com.michal.plata.github_summarizer.support.printer.DebugPrinter;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -35,7 +35,7 @@ public class GithubCommunicationServiceImpl implements GithubCommunicationServic
             e.printStackTrace();
             return null;
         }
-        Printer.print("Github says that your id is " + Long.toString(id));
+        DebugPrinter.print("Github says that your id is " + Long.toString(id));
         return new GithubDataDTOImpl();
     }
 
